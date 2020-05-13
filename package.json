@@ -1,8 +1,9 @@
 {
-  "name": "Healthnet",
+  "name": "BORVO",
   "version": "1.0.0",
   "description": "Blockchain based system to monitor and manage insurance and health records",
   "main": "truffle-config.js",
+  "repository": "https://github.com/srujandeshpande/borvo",
   "directories": {
     "test": "test"
   },
