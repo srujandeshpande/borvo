@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
+</head>
+<body>
+	<form method = "GET" action = "#">
+Enter Patient ID:
+<input id = "patient_id" type = "text" name = "patient_id"/>
+<button type="submit">Search</button>
+</form>
+
+<br>
+<br>
+
+<div class = "container">
+	<div class = "Patient details">
+		<p>patient name:<span id = "Patient name"></span>  </p>
+		<p>patient id:<span id = "Patient id"></span>  </p>
+		<p>patient gender:<span id = "Patient gender"></span>  </p>
+		<p>patient contact_no:<span id = "Patient contact_no"></span>  </p>
+		<p>patient :<span id = "Patient name"></span>  </p>
+	</div>
+</div>
+
+
+<ul class="nav nav-tabs md-tabs" id="myTabMD" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#home-md" role="tab" aria-controls="home-md"
+      aria-selected="true">View patient history</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#profile-md" role="tab" aria-controls="profile-md"
+      aria-selected="false">Add patient interaction</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab-md" data-toggle="tab" href="#contact-md" role="tab" aria-controls="contact-md"
+      aria-selected="false">Send insurance claims</a>
+  </li>
+</ul>
+<div class="tab-content card pt-5" id="myTabContentMD">
+  <div class="tab-pane fade show active" id="home-md" role="tabpanel" aria-labelledby="home-tab-md">
+    <p id = "View_patient_history"> this is patient history</p>
+  </div>
+  <div class="tab-pane fade" id="profile-md" role="tabpanel" aria-labelledby="profile-tab-md">
+    <p id = "Add_patient_record"> Add a new patient interaction</p>
+		<form id="newPatientRecord" onsubmit="App.addRecord(); return false;">
+			<input type="number" placeholder="Patient Number" id="new_record_patient_number"></input>
+			<input type="text" placeholder="Interaction Information" id="new_record_patient_info"></input>
+			<input type="submit"></input>
+		</form>
+  </div>
+  <div class="tab-pane fade" id="contact-md" role="tabpanel" aria-labelledby="contact-tab-md">
+    <p id ="send_insurance"> Insurance claims here</p>
+  </div>
+</div>
+
+
+<script src="app.js" type="text/javascript"></script>
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
+</body>
+
+</html>

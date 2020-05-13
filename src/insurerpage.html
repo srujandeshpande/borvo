@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
+<style>
+  .final_form{
+    text-align: center;
+  }
+  .the_form{
+    margin-top: 20px;
+    margin-bottom: 50px; 
+    display: inline-block;
+    padding: 30px;
+
+    border:3px solid green;
+  }
+  .the_form input{
+    padding:30px;
+    margin: 20px;
+  }
+  .container{
+    border: 2px dotted blue;
+  }
+</style>
+
+</head>
+<body>
+
+<form method = "GET" action = "#">
+    Enter Insurance ID :
+    <input id = "insurance_id" type = "text" name = "insurance_id"/>
+    <button type="submit">Search</button>
+</form>
+<br><br>
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action active">
+    Pending Requests
+  </a>
+  <!-- NEED TO ADD THE BELOW FROM JAVASCRIPT  -->
+  <button onclick="fun()" class="list-group-item list-group-item-action">Insurance id-1</button>
+  <button onclick="fun()" class="list-group-item list-group-item-action">Insurance id-2</button>
+  <button onclick="fun()" class="list-group-item list-group-item-action">Insurance id-3</button>
+</div>
+<br>
+<br>
+
+<div class = "container insurance_details">
+	<div class = "Insurance details">
+		<p>Insurer's name:<span id = "Insurer name"></span>  </p>
+		<p>insurer's id:<span id = "Insurer id"></span>  </p>	
+		<p>insurance type:<span id = "Insurance type"></span>  </p>
+		<p>Medical institute:<span id = "medical institute"></span>  </p>
+		<p>claim amount:<span id = "Claim amount"></span></p>
+    <p>status:<span id = "Status"></span></p>
+	</div>
+
+
+
+<ul class="nav nav-tabs md-tabs" id="myTabMD" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#home-md" role="tab" aria-controls="home-md"
+      aria-selected="true">View medical history</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#profile-md" role="tab" aria-controls="profile-md"
+      aria-selected="false">View insurance history</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab-md" data-toggle="tab" href="#contact-md" role="tab" aria-controls="contact-md"
+      aria-selected="false">View claim reason</a>
+  </li>
+</ul>
+<div class="tab-content card pt-5" id="myTabContentMD">
+  <div class="tab-pane fade show active" id="home-md" role="tabpanel" aria-labelledby="home-tab-md">
+    <p id = "View_patient_history"> this is patient medical history</p>
+  </div> 
+  <div class="tab-pane fade" id="profile-md" role="tabpanel" aria-labelledby="profile-tab-md">
+    <p id = "Add_patient_record"> this is patient insurance history</p>
+  </div>
+  <div class="tab-pane fade" id="contact-md" role="tabpanel" aria-labelledby="contact-tab-md">
+    <p id ="send_insurance"> This is patient insurance claim details.in our full implementation people can scan documents and then put it up as well</p>
+  </div>
+
+  
+</div>
+<div class = "final_form">
+<form method = "post" class = "the_form">
+
+    Insurance claim :
+    <label class="radio-inline">
+      <input type="radio" name="optradio" checked>Accept
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio">Reject
+    </label>
+    <br>Claim amount:
+    <input id = "claim_amt" type = "text" placeholder="Claim amount"/><br>
+    Comments:
+  <input id = "comments" type = "text" placeholder="Write comments.."></input><br><br>
+    <button type = "submit" class = "btn btn-success">Submit</button>
+  </form>
+</div>
+</div>
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
+</body>
+
+</html>
+
+
+
+
+
